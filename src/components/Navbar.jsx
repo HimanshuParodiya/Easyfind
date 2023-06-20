@@ -1,29 +1,50 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.css'
-import Logo from '../assets/Easyfindlogo.svg'
+import LightLogo from '../assets/EasyfindLightLogo.png'
+import DarkLogo from '../assets/EasyFindDarkLogo.png'
 import {AiOutlineShoppingCart, AiOutlineSearch} from 'react-icons/ai'
 
 const Navbar = () => {
+
+    const [showNavbar, setShowNavbar] = useState(false)
+    let transitionNav = () =>{
+        if(window.scrollY > 100){
+            setShowNavbar(true)
+            console.log("yess");
+        }else{
+            setShowNavbar(false)
+            console.log("no");
+        }
+    }
+
+    useEffect(() => {
+      window.addEventListener("scroll", transitionNav )
+    
+      return () => {
+        window.removeEventListener("scroll", transitionNav)
+      }
+    }, [])
+    
   return (
     <>
         <header>
-            <nav className='navbar'>
+            <nav className={`navbar ${showNavbar && "black_nav box_shadow"}`}>
                 <div className="logo">
-                    <img src={Logo} alt="" />
+                    <img src={`${showNavbar ? DarkLogo : LightLogo}`} alt="" />
                 </div>
                 <div className="navbar_search">
                     <input type="text" />
-                    <AiOutlineSearch size={25} />
+                    <AiOutlineSearch className='search_icon' size={25} />
 
                 </div>
                 <div className="navbar_menu">
                     <ul className="navbar_ul">
-                        <li className="navbar_li"><a href="#">Home</a></li>
-                        <li className="navbar_li"><a href="#">Products</a></li>
-                        <li className="navbar_li"><a href="#">Service</a></li>
+                        <li className="navbar_li"><a className={`${ showNavbar && "color_white"}`} href="#">Home</a></li>
+                        <li className="navbar_li"><a className={`${ showNavbar && "color_white"}`}  href="#">Products</a></li>
+                        <li className="navbar_li"><a className={`${ showNavbar && "color_white"}`}  href="#">Service</a></li>
                     </ul>
                     <div className="add_to_cart">
-                        <AiOutlineShoppingCart size={25} />
+                        <AiOutlineShoppingCart className={`${ showNavbar && "color_white"}`} size={25} />
                     </div>
                 </div>
             </nav>

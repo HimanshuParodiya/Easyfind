@@ -3,7 +3,15 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 5vh;
-    background-color: whitesmoke;
+    background-color: #F4F4F2;
+    position: fixed;
+    left: 0;
+    right: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 12px -2px, rgba(0, 0, 0, 0.3) 0px 0px 7px -3px;
+}
+
+.box_shadow{
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 12px -2px, rgba(255, 255, 255, 0.3) 0px 0px 7px -3px;
 }
 
 .navbar .logo{
@@ -16,6 +24,11 @@
     height: 100%;
 }
 
+.black_nav{
+    background-color: #111;
+
+}
+
 .navbar_search{
     flex: 0.4;
     display: flex;
@@ -24,7 +37,6 @@
     border-radius: 40px;
     background-color: white;
     height: 50px;
-    padding: 0 10px;
 }
 
 .navbar_search > input{
@@ -34,6 +46,12 @@
     outline: none;
     padding-left: 5%;
     background: none;
+    flex: 0.8;
+}
+
+.search_icon{
+    flex: 0.2;
+    text-align: center;
 }
 
 .navbar .navbar_menu{
@@ -53,11 +71,15 @@
 }
 
 
+
 .navbar .navbar_menu .navbar_ul .navbar_li a{
     position: relative;
     padding-bottom: 3%;
 }
 
+.color_white{
+    color: #fff;
+}
 
 
 .navbar .navbar_menu .navbar_ul .navbar_li a::after{
