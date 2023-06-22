@@ -2,12 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5vh;
+    padding: 0 10vh;
     background-color: #F4F4F2;
     position: fixed;
     left: 0;
     right: 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 12px -2px, rgba(0, 0, 0, 0.3) 0px 0px 7px -3px;
+    z-index: 999;
 }
 
 .box_shadow{
@@ -75,6 +76,7 @@
 .navbar .navbar_menu .navbar_ul .navbar_li a{
     position: relative;
     padding-bottom: 3%;
+    color: #000;
 }
 
 .color_white{

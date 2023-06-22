@@ -1,0 +1,40 @@
+.home{
+    padding-top: 80px;
+    height: 100vh;
+}
+
+.homeBanner{
+    width: 100vw;
+    margin: 0 auto;
+    height: 70vh;
+    display: flex;
+}
+
+.carousel{
+    height: 100%;
+}
+.homeBannerImage {
+    width: 100%;
+    height: 70vh;
+  
+}
+.carousel li.thumb{
+    display: none;
+}
+.carousel p.carousel-status {
+    display: none;
+}
+.carousel.carousel-slider .control-arrow {
+    top: 30%;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    margin-top: 0;
+    padding: 5px;
+}
+.control-arrow {
+    display: none;
+}
+.control-dots{
+    background-color: #111;
+    }
