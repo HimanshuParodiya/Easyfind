@@ -1,0 +1,31 @@
+.productsCategory__container{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.productsCategory__container::-webkit-scrollbar{
+    display: none;
+}
+
+.productCategory__details{
+    text-align: center;
+    flex-basis: 100%;
+    cursor: pointer;
+}
+
+.productCategory__details .productCategory__image {
+    width: 200px;
+    height: 150px;
+}
+.productCategory__details .productCategory__image img {
+ height: 100%;
+ width: 100%;
+}
+.productCategory__name{
+    font-size: 14px;
+}

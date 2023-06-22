@@ -16,14 +16,14 @@ const HomeBanner = () => {
   return (
     <div className="homeBannerContainer">
       <div className="homeBanner">
-      <Carousel  infiniteLoop="true" autoPlay="500" >
-      {
-          imageArray.map((image, index)=>{
-            return <img key={index}  className='homeBannerImage' src={image} alt="cant find" />
-          })
-        }
-            
-            </Carousel>
+        <Carousel emulateTouch={true} infiniteLoop="true" autoPlay="500" >
+          {
+            imageArray.map((image, index) => {
+              return <img key={index} className='homeBannerImage' src={image} alt="cant find" />
+            })
+          }
+
+        </Carousel>
       </div>
 
     </div>

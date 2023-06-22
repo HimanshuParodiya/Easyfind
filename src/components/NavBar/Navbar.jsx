@@ -33,15 +33,15 @@ const Navbar = () => {
                     <img src={`${showNavbar ? DarkLogo : LightLogo}`} alt="" />
                 </div>
                 <div className="navbar_search">
-                    <input type="text" />
+                    <input type="text" placeholder="let's Find"/>
                     <AiOutlineSearch className='search_icon' size={25} />
 
                 </div>
                 <div className="navbar_menu">
                     <ul className="navbar_ul">
-                        <li className="navbar_li"><a className={`${ showNavbar && "color_white"}`} href="#">Home</a></li>
-                        <li className="navbar_li"><a className={`${ showNavbar && "color_white"}`}  href="#">Products</a></li>
-                        <li className="navbar_li"><a className={`${ showNavbar && "color_white"}`}  href="#">Service</a></li>
+                        <li className="navbar_li"><a className={`${ showNavbar? "color_white" : "color_black"}`} href="#">Home</a></li>
+                        <li className="navbar_li"><a className={`${ showNavbar? "color_white" : "color_black"}`}  href="#">Products</a></li>
+                        <li className="navbar_li"><a className={`${ showNavbar? "color_white" : "color_black"}`}  href="#">Service</a></li>
                     </ul>
                     <div className="add_to_cart">
                         <AiOutlineShoppingCart className={`${ showNavbar && "color_white"}`} size={25} />

@@ -1,4 +1,6 @@
-
+.homeBannerContainer{
+    overflow-x: hidden;
+}
 
 .homeBanner{
     width: 100vw;
@@ -7,9 +9,6 @@
     display: flex;
 }
 
-.carousel{
-    height: 100%;
-}
 .homeBannerImage {
     width: 100%;
     height: 70vh;

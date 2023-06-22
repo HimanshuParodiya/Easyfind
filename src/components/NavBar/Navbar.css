@@ -38,6 +38,7 @@
     border-radius: 40px;
     background-color: white;
     height: 50px;
+    
 }
 
 .navbar_search > input{
@@ -48,6 +49,7 @@
     padding-left: 5%;
     background: none;
     flex: 0.8;
+    font-size: 1rem;
 }
 
 .search_icon{
@@ -73,15 +75,18 @@
 
 
 
-.navbar .navbar_menu .navbar_ul .navbar_li a{
+.navbar .navbar_menu .navbar_ul .navbar_li a.color_black{
     position: relative;
     padding-bottom: 3%;
     color: #000;
 }
 
+
 .color_white{
     color: #fff;
 }
+
+
 
 
 .navbar .navbar_menu .navbar_ul .navbar_li a::after{
