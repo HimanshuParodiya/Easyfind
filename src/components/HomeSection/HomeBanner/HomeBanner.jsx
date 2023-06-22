@@ -1,23 +1,22 @@
 import React from 'react'
-import './Home.css'
+import './HomeBanner.css'
 import BagImage from '/src/assets/Home/Bag.jpg'
 import MouseImg from '/src/assets/Home/Mouse.jpg'
 import HeadPhones from '/src/assets/Home/HeadPhones.jpg'
 import GamingHeadPhones from '/src/assets/Home/GamingHeadphones.jpg'
 import Shoes from '/src/assets/Home/Shoe.jpg'
-// import {AiOutlineLeft, AiOutlineRight} from 'react-icons/ai'
 import { Carousel } from 'react-responsive-carousel'
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-const Home = () => {
+const HomeBanner = () => {
 
 
   let imageArray = [BagImage, MouseImg, HeadPhones, GamingHeadPhones, Shoes]
   return (
-    <div className="home">
+    <div className="homeBannerContainer">
       <div className="homeBanner">
-      <Carousel  infiniteLoop="true" autoPlay="500"  className='carousel'>
+      <Carousel  infiniteLoop="true" autoPlay="500" >
       {
           imageArray.map((image, index)=>{
             return <img key={index}  className='homeBannerImage' src={image} alt="cant find" />
@@ -31,4 +30,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomeBanner

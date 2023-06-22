@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.css'
-import LightLogo from '../assets/Logo/EasyfindLightLogo.png'
-import DarkLogo from '../assets/Logo/EasyFindDarkLogo.png'
+import LightLogo from '/src/assets/Logo/EasyfindLightLogo.png'
+import DarkLogo from '/src/assets/Logo/EasyFindDarkLogo.png'
 import {AiOutlineShoppingCart, AiOutlineSearch} from 'react-icons/ai'
 
 const Navbar = () => {

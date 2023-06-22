@@ -1,7 +1,4 @@
-.home{
-    padding-top: 80px;
-    height: 100vh;
-}
+
 
 .homeBanner{
     width: 100vw;
@@ -35,6 +32,8 @@
 .control-arrow {
     display: none;
 }
-.control-dots{
+
+.carousel ul.control-dots {
     background-color: #111;
-    }
+    margin: 0px;
+}
