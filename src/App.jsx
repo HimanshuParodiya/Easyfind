@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Home from './components/HomeSection/Home'
 import Navbar from './components/NavBar/Navbar'
-import PreLoader from './components/PreLoader'
+import PreLoader from './components/PreLoader/PreLoader'
 
 function App() {
   // state for preloader 
