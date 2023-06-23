@@ -53,41 +53,41 @@ const EachProductRow = () => {
               <div className="eachRow_deatils productCategory__details">
                 {
                   product.map((productImages) => {
-                    console.log(productImages);
+                    // console.log(productImages);
                     const slicedImages = productImages.images.slice(0, 1);
                     return (
 
                       slicedImages.map((image, index) => {
                         return (
-                          <div className='eachProduct__details_container'>
-                            <img key={index} loading='lazy' className='productCategory__image' src={image} alt="" />
+                          <div key={index} className='eachProduct__details_container'>
+                            <img  loading='lazy' className='productCategory__image' src={image} alt="" />
                             <div className="eachProduct__detail">
                               <div className="eachProduct_name_price_discount">
-                                <p className='bold eachProduct_title'>{productImages.title}</p>
+                                <div className='bold eachProduct_title'>{productImages.title}</div>
                                 <div className="eachProduct_price_discount">
                                   <div className="discount_on_value_box">
-                                    <p className='discount_value'>{productImages.discountPercentage}%</p>
-                                    <p className='bold eachProduct_discount_container'>On
-                                      <p className='eachProduct_total_discount'>
+                                    <span className='discount_value'>{productImages.discountPercentage}%</span>
+                                    <span className='bold eachProduct_discount_container'>On
+                                      <span className='eachProduct_total_discount'>
                                         ${((+productImages.discountPercentage * +productImages.price) / 100 + (productImages.price)).toFixed(2)}
 
-                                      </p>
-                                    </p>
+                                      </span>
+                                    </span>
 
                                   </div>
-                                  <p className='bold eachProduct_price'> ${productImages.price}</p>
+                                  <span className='bold eachProduct_price'> ${productImages.price}</span>
 
                                 </div>
                               </div>
 
                               <div className="eachProduct_rating_brand">
-                                <p className='bold_semi'>Brand: {productImages.brand}</p>
-                                <p className='bold_semi'>⭐ {productImages.rating}</p>
+                                <span className='bold_semi'>Brand: {productImages.brand}</span>
+                                <span className='bold_semi'>⭐ {productImages.rating}</span>
                               </div>
 
 
                               <div className="eachProduct_stock">
-                                <p className='bold_semi'>Available stocks {productImages.stock}</p>
+                                <span className='bold_semi'>Available stocks {productImages.stock}</span>
                               </div>
 
                             </div>

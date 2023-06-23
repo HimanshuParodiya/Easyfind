@@ -26,7 +26,7 @@ h5.productCategory__name{
 
 .eachRow_deatils img.productCategory__image{
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 1px;
     height: 300px;
     width: 300px;
 }
@@ -34,6 +34,13 @@ h5.productCategory__name{
 .eachProduct__details_container{
     display: flex;
     flex-direction: column;
+    margin: 20px 20px;
+}
+
+
+.eachProduct__detail{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 0 5px;
 }
 
 
@@ -67,11 +74,11 @@ h5.productCategory__name{
     text-decoration: line-through;
     margin-left: 10px;
 }
-p.discount_value{
-    font-size: 20px;
+span.discount_value{
+    font-size: 15px;
     color: red;
 }
-p.eachProduct_price{
-    font-size: 20px;
+span.eachProduct_price{
+    font-size: 15px;
     color: green;
 }
