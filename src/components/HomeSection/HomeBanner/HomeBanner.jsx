@@ -22,7 +22,7 @@ const HomeBanner = () => {
           {
             // looping through the imageArray 
             imageArray.map((image, index) => {
-              return <img key={index} className='homeBannerImage' src={image} alt="cant find" />
+              return <img loading='lazy' key={index} className='homeBannerImage' src={image} alt="cant find" />
             })
           }
 

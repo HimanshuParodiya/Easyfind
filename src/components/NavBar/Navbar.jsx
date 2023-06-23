@@ -35,7 +35,7 @@ const Navbar = () => {
                 {/* Logo  */}
                 <div className="logo">
                     {/* if showNavbar is true show darkLogo else show lightLogo */}
-                    <img src={`${showNavbar ? DarkLogo : LightLogo}`} alt="" />
+                    <img loading='lazy' src={`${showNavbar ? DarkLogo : LightLogo}`} alt="" />
                 </div>
 
 

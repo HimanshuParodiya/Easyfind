@@ -59,7 +59,7 @@ const ProductsCategory = () => {
             <div key={index} className="productCategory__details">
               <div className="productCategory__image">
                 {/* getting the thumbnail whose category get matched  */}
-                <img src={product.thumbnail} alt="img" />
+                <img loading='lazy' src={product.thumbnail} alt="img" />
               </div>
               <div className="productCategory__name">
                 {/* printing all unique category  */}

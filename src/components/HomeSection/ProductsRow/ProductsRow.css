@@ -1,0 +1,22 @@
+.eachRow_deatils{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 1rem;
+    margin: 0 1rem;
+
+}
+.eachRow_deatils::-webkit-scrollbar{
+  display: none;
+}
+h5.productCategory__name{
+    font-size: 20px;
+    margin: 0px 0 0 20px;
+    text-align: center;
+}
+
+img.productCategory__image{
+    margin-top: 20px;
+}

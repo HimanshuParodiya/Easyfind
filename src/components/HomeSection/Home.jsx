@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import HomeBanner from './HomeBanner/HomeBanner'
 import ProductsCategory from './ProductsCategory/ProductsCategory'
+import ProductsRow from './ProductsRow/ProductsRow'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <ProductsCategory />
 
       {/* Some products of each categories  */}
+      <ProductsRow />
   
     </div>
   )
