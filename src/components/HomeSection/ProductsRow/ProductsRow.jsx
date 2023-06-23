@@ -4,12 +4,8 @@ import EachProductRow from './EachProductRow'
 
 const ProductsRow = () => {
   return (
-    <div>
-        <h1>
-
-      Let's See Our Products
-        </h1>
-
+    <div className='productsRow__container'>
+        <h1 className='productsRow__container__heading'>Let's See Our Some Products </h1>
         <EachProductRow />
     </div>
   )

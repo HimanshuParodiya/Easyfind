@@ -11,7 +11,7 @@
     display: none;
 }
 
-.productCategory__details{
+.productsCategory__container .productCategory__details{
     text-align: center;
     flex-basis: 100%;
     cursor: pointer;

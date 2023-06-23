@@ -24,6 +24,7 @@
 .navbar .logo img{
     cursor: pointer;
     height: 100%;
+    
 }
 
 .black_nav{
@@ -76,9 +77,12 @@
 
 
 
-.navbar .navbar_menu .navbar_ul .navbar_li a.color_black{
+.navbar .navbar_menu .navbar_ul .navbar_li a{
     position: relative;
     padding-bottom: 3%;
+}
+
+.navbar .navbar_menu .navbar_ul .navbar_li a.color_black{
     color: #000;
 }
 
