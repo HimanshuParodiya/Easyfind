@@ -21,6 +21,12 @@
 .productCategory__details .productCategory__image {
     width: 200px;
     height: 150px;
+    margin-bottom: 20px;
+    transition: scale 0.255s ease-in-out;
+}
+
+.productCategory__details .productCategory__image:hover {
+    scale: 1.2;
 }
 .productCategory__details .productCategory__image img {
  height: 100%;

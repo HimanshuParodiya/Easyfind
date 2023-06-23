@@ -14,6 +14,9 @@
     height: 70vh;
   
 }
+.carousel{
+    cursor: pointer;
+}
 .carousel li.thumb{
     display: none;
 }

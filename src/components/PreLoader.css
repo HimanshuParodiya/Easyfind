@@ -1,0 +1,17 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1C1E26; /* Optional: Add a background color for the preloader */
+  }
+  
+  .preloader__video {
+    width: 100%;
+    height: auto;
+  }
+  
