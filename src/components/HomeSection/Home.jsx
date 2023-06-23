@@ -9,8 +9,13 @@ const Home = () => {
 
   return (
     <div className="home">
+      {/* Carousel banner  */}
       <HomeBanner />
+
+      {/* Categories we have  */}
       <ProductsCategory />
+
+      {/* Some products of each categories  */}
   
     </div>
   )

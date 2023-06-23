@@ -5,10 +5,14 @@ import Navbar from './components/NavBar/Navbar'
 import PreLoader from './components/PreLoader'
 
 function App() {
+  // state for preloader 
   const [loader, setLoader] = useState(false)
 
   useEffect(() => {
+    // when the page gets load set loader to true
     setLoader(true)
+  
+    // after 8 sec set the loader to false
     setTimeout(() => {
       setLoader(false)
     }, 5000);
@@ -18,6 +22,8 @@ function App() {
   
 
   return (
+
+    // if loader is true show preloader else show our app
     <>
       {loader 
       ?

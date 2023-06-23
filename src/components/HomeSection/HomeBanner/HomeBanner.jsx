@@ -16,8 +16,11 @@ const HomeBanner = () => {
   return (
     <div className="homeBannerContainer">
       <div className="homeBanner">
+
+        {/* install carousel with npm  */}
         <Carousel emulateTouch={true} infiniteLoop="true" autoPlay="500" >
           {
+            // looping through the imageArray 
             imageArray.map((image, index) => {
               return <img key={index} className='homeBannerImage' src={image} alt="cant find" />
             })
