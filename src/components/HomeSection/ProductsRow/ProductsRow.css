@@ -82,3 +82,7 @@ span.eachProduct_price{
     font-size: 15px;
     color: green;
 }
+
+.loadingIcon{
+    text-align: center;
+}

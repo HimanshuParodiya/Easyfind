@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './ProductsRow.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { setLoading } from '../../../state/Slice/loadingSlice'
+import { MagnifyingGlass } from 'react-loader-spinner'
 
 const EachProductRow = () => {
+  const loadingData = useSelector(state=> state.loading)
+  const dispatch = useDispatch()
   const [products, setProducts] = useState([])
   const [limits, setLimits] = useState(10)
   let getProducts = async (limit) => {
@@ -55,8 +60,15 @@ const EachProductRow = () => {
   
   console.log(limits);
   useEffect(() => {
+    const fetchData = async () => {
+      dispatch(setLoading(true));
+      await getProducts(limits);
+      dispatch(setLoading(false));
+    };
+  
     window.addEventListener("scroll", handelInfiniteScroll);
-    getProducts(limits)
+    fetchData();
+    
     return () => window.removeEventListener("scroll", handelInfiniteScroll);
   }, [limits]);
 
@@ -123,6 +135,19 @@ const EachProductRow = () => {
 
           )
         })
+      }
+      {
+        loadingData &&
+        <div className="loadingIcon">
+
+        <MagnifyingGlass
+        height="80"
+        width="80"
+        ariaLabel="MagnifyingGlass-loading"
+        glassColor = '#c0efff'
+        color = '#111'
+        />
+        </div>
       }
 
     </div>

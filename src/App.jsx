@@ -7,15 +7,15 @@ import Footer from './components/Footer/Footer'
 
 function App() {
   // state for preloader 
-  const [loader, setLoader] = useState(false)
+  const [IsPreLoader, setIsPreLoader] = useState(false)
 
   useEffect(() => {
     // when the page gets load set loader to true
-    setLoader(true)
+    setIsPreLoader(true)
   
     // after 8 sec set the loader to false
     setTimeout(() => {
-      setLoader(false)
+      setIsPreLoader(false)
     }, 5000);
   
  
@@ -26,7 +26,7 @@ function App() {
 
     // if loader is true show preloader else show our app
     <>
-      {loader 
+      {IsPreLoader 
       ?
         <PreLoader />
         :
