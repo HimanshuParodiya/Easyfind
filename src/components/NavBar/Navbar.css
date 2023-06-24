@@ -80,9 +80,10 @@
 .navbar .navbar_menu .navbar_ul .navbar_li a{
     position: relative;
     padding-bottom: 3%;
+
 }
 
-.navbar .navbar_menu .navbar_ul .navbar_li a.color_black{
+.color_black{
     color: #000;
 }
 
@@ -97,7 +98,7 @@
 .navbar .navbar_menu .navbar_ul .navbar_li a::after{
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 50%;
     right: 50%;
     height: 2px;
@@ -121,6 +122,14 @@
     flex: 0.2;
     text-align: center;
     cursor: pointer;
+}
+
+a.active{
+    border-bottom: 2px solid rgb(177, 171, 171);
+}
+
+a.cartActive .cartIcon{
+    background-color: red;
 }
 
 @media only screen and (max-width: 600px) {

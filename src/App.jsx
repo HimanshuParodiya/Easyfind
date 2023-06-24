@@ -4,6 +4,12 @@ import Home from './components/HomeSection/Home'
 import Navbar from './components/NavBar/Navbar'
 import PreLoader from './components/PreLoader/PreLoader'
 import Footer from './components/Footer/Footer'
+import Product from './components/ProductPage/Product'
+import {  BrowserRouter as Router, Route, Routes,  } from 'react-router-dom'
+import Service from './components/ServicePage/Service'
+import Cart from './components/CartPage/Cart'
+
+
 
 function App() {
   // state for preloader 
@@ -31,12 +37,19 @@ function App() {
         <PreLoader />
         :
     <div className="app">
+      <Router>
       <Navbar />
-      <Home />
+        <Routes>
+        <Route exact="true" path='/' element={ <Home />} />
+        <Route path='/products' element={<Product />} />  
+        <Route path='/services' element={<Service />} />  
+        <Route path='/cart' element={<Cart />} />  
+        </Routes>
       <Footer />
+      </Router>
     </div>
 
-      }
+       } 
     </>
   )
 }
