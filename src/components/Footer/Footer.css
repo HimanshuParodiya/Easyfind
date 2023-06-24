@@ -1,0 +1,9 @@
+.footer__container{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: white;
+    background-color: #1C1E26;
+}

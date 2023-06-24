@@ -3,8 +3,9 @@ import './ProductsRow.css'
 
 const EachProductRow = () => {
   const [products, setProducts] = useState([])
-  let getProducts = async () => {
-    let productsData = await fetch('https://dummyjson.com/products?limit=100')
+  const [limits, setLimits] = useState(10)
+  let getProducts = async (limit) => {
+    let productsData = await fetch(`https://dummyjson.com/products?limit=${limit}`)
     let data = await productsData.json()
     // console.log(data.products);
 
@@ -31,15 +32,35 @@ const EachProductRow = () => {
   // creating an unique value for category from products array 
   let uniqueCategory = getUniqueValue(products, "category");
 
-
+  
+  const handelInfiniteScroll = async () => {
+    // console.log("scrollHeight" + document.documentElement.scrollHeight);
+    // console.log("innerHeight" + window.innerHeight);
+    // console.log("scrollTop" + document.documentElement.scrollTop);
+    try {
+      if (
+        window.innerHeight + document.documentElement.scrollTop + 1 >=
+        document.documentElement.scrollHeight &&
+        limits < 100
+      ) {
+        setLimits((prev) => Math.min(prev + 10, 100));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
+  
+  
+  
+  console.log(limits);
   useEffect(() => {
-    // always run this function when the page will load
-    getProducts()
+    window.addEventListener("scroll", handelInfiniteScroll);
+    getProducts(limits)
+    return () => window.removeEventListener("scroll", handelInfiniteScroll);
+  }, [limits]);
 
-
-  }, [])
-
-
+  
   return (
     <div className='eachRow'>
       {

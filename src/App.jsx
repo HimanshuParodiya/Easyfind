@@ -3,6 +3,7 @@ import './App.css'
 import Home from './components/HomeSection/Home'
 import Navbar from './components/NavBar/Navbar'
 import PreLoader from './components/PreLoader/PreLoader'
+import Footer from './components/Footer/Footer'
 
 function App() {
   // state for preloader 
@@ -32,6 +33,7 @@ function App() {
     <div className="app">
       <Navbar />
       <Home />
+      <Footer />
     </div>
 
       }
