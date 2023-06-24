@@ -58,7 +58,7 @@ const EachProductRow = () => {
   
   
   
-  console.log(limits);
+  // console.log(limits);
   useEffect(() => {
     const fetchData = async () => {
       dispatch(setLoading(true));

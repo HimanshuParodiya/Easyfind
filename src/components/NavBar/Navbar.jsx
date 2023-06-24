@@ -41,7 +41,7 @@ const Navbar = () => {
         sideMenu.classList.toggle("showMenu")
       
     }
-console.log(openHamburger);
+// console.log(openHamburger);  
 
   return (
     <>
