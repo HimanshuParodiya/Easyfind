@@ -28,17 +28,26 @@ const Footer = () => {
 
           <div className="footer_contact footerContact_phone">
             <FcPhone size={20} className='footer_phone_icon footer_contact_Icon' /> :
+            <p className='footerContact_p'>
             +91 0000000000
+
+            </p>
           </div>
           
           <div className="footer_contact footerContact_email">
             <BiLogoGmail size={20} className='footer_email_icon footer_contact_Icon' /> :
+            <p className='footerContact_p'>
+
             easyfind@support.com
+            </p>
           </div>
           
           <div className="footer_contact footerContact_email">
             <BsFillBuildingsFill size={20} className='footer_address_icon footer_contact_Icon' /> :
-            easyfind@support.com
+            <p className='footerContact_p'>
+
+              New Delhi India
+            </p>
           </div>
 
         </div>

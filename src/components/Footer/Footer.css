@@ -70,3 +70,29 @@
     text-align: center;
     padding: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .footer__container{
+        height: 40vh;
+    }
+    .footer_logo{
+        height: 100px;
+        width: 100px;
+    }
+    .footer_name{
+        font-size: 12px;
+        border-top: 1px solid gray;
+    }
+    .footer_contact{
+        margin-bottom: 10px;
+    }
+    .footer_bottom{
+        font-size: 14px;
+        padding: 10px;
+    }
+    .footerContact_p{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    
+}
