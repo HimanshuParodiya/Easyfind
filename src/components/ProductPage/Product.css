@@ -1,4 +1,15 @@
 .product_container{
     padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+}
+.product_category_section{
+    border: 1px solid red;
+    flex: 0.3;
+}
+.product_featured{
+    border: 1px solid red;
+    flex: 0.6;
 }
