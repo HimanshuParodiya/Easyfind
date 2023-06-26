@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Product.css'
+import ProductCategoryList from './ProductCategoryList/ProductCategoryList'
+import FeaturedProduct from './FeaturedProducts/FeaturedProduct'
+
+
 
 const Product = () => {
+
+
+
   return (
     <div className='product_container'>
-      This is our products
+      <div className="product_category_section">
+        <ProductCategoryList />
+      </div>
+      <div className="product_featured">
+      <FeaturedProduct />
+      </div>
     </div>
   )
 }

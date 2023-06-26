@@ -1,0 +1,10 @@
+
+.featuredProduct{
+    overflow-x: scroll;
+    display: flex;
+    scroll-behavior: smooth;
+    }
+.featuredProduct::-webkit-scrollbar{
+    display: none;
+    }
+

@@ -3,6 +3,7 @@ import './ProductsRow.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { setLoading } from '../../../state/Slice/loadingSlice'
 import { MagnifyingGlass } from 'react-loader-spinner'
+import ProductContainer from '../../ProductBox/ProductContainer'
 
 const EachProductRow = () => {
   const loadingData = useSelector(state=> state.loading)
@@ -92,39 +93,16 @@ const EachProductRow = () => {
 
                       slicedImages.map((image, index) => {
                         return (
-                          <div key={index} className='eachProduct__details_container'>
-                            <img  loading='lazy' className='productCategory__image' src={image} alt="" />
-                            <div className="eachProduct__detail">
-                              <div className="eachProduct_name_price_discount">
-                                <div className='bold eachProduct_title'>{productImages.title}</div>
-                                <div className="eachProduct_price_discount">
-                                  <div className="discount_on_value_box">
-                                    <span className='discount_value'>{productImages.discountPercentage}%</span>
-                                    <span className='bold eachProduct_discount_container'>On
-                                      <span className='eachProduct_total_discount'>
-                                        ${((+productImages.discountPercentage * +productImages.price) / 100 + (productImages.price)).toFixed(2)}
-
-                                      </span>
-                                    </span>
-
-                                  </div>
-                                  <span className='bold eachProduct_price'> ${productImages.price}</span>
-
-                                </div>
-                              </div>
-
-                              <div className="eachProduct_rating_brand">
-                                <span className='bold_semi'>Brand: {productImages.brand}</span>
-                                <span className='bold_semi'>⭐ {productImages.rating}</span>
-                              </div>
-
-
-                              <div className="eachProduct_stock">
-                                <span className='bold_semi'>Available stocks {productImages.stock}</span>
-                              </div>
-
-                            </div>
-                          </div>
+                          <ProductContainer 
+                          key={index}
+                          image={image}
+                          title={productImages.title}
+                          discountPercentage={productImages.discountPercentage}
+                          price={productImages.price}
+                          brand={productImages.brand}
+                          rating={productImages.rating}
+                          stock={productImages.stock}
+                          />
                         )
                       })
                     )

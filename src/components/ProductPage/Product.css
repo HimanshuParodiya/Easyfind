@@ -1,4 +1,19 @@
 .product_container{
     padding-top: 80px;
+    
+    
+}
+.product_category_section{
+    height: 100%;
+    width: 20%;
+    position: fixed;
+
+}
+.product_category_section::-webkit-scrollbar{
+    display: none;
+}
+.product_featured{
+    width: 75%;
+    margin: 0 0 0 auto;
 
 }
