@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './FeaturedProduct.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { setLoading } from '../../../state/Slice/loadingSlice'
 import ProductContainer from '../../ProductBox/ProductContainer'
 
 const FeaturedProduct = () => {
-    const loadingData = useSelector(state=> state.loading)
-    const dispatch = useDispatch()
     const [products, setProducts] = useState([])
     const [categoryUrl, setCategoryUrl] = useState('?limit=100')
     let getProducts = async () => {
@@ -59,9 +55,7 @@ const FeaturedProduct = () => {
     // console.log(limits);
     useEffect(() => {
       const fetchData = async () => {
-        dispatch(setLoading(true));
         await getProducts();
-        dispatch(setLoading(false));
       };
     
       window.addEventListener("scroll", handelInfiniteScroll);

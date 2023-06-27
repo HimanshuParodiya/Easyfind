@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './ProductsRow.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { setLoading } from '../../../state/Slice/loadingSlice'
 import { MagnifyingGlass } from 'react-loader-spinner'
 import ProductContainer from '../../ProductBox/ProductContainer'
 
 const EachProductRow = () => {
-  const loadingData = useSelector(state=> state.loading)
-  const dispatch = useDispatch()
   const [products, setProducts] = useState([])
   const [limits, setLimits] = useState(10)
   let getProducts = async (limit) => {
@@ -62,9 +58,7 @@ const EachProductRow = () => {
   // console.log(limits);
   useEffect(() => {
     const fetchData = async () => {
-      dispatch(setLoading(true));
       await getProducts(limits);
-      dispatch(setLoading(false));
     };
   
     window.addEventListener("scroll", handelInfiniteScroll);
@@ -114,7 +108,7 @@ const EachProductRow = () => {
           )
         })
       }
-      {
+      {/* {
         loadingData &&
         <div className="loadingIcon">
 
@@ -126,7 +120,7 @@ const EachProductRow = () => {
         color = '#111'
         />
         </div>
-      }
+      } */}
 
     </div>
   )
