@@ -45,6 +45,7 @@ const EachProductRow = () => {
                         return (
                           <ProductContainer 
                           key={index}
+                          id={productImages.id}
                           image={image}
                           title={productImages.title}
                           discountPercentage={productImages.discountPercentage}

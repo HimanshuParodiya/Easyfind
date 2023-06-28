@@ -25,7 +25,7 @@ const ProductsCategory = () => {
           
 
           return (
-            <NavLink key={index} to={`/singleproduct/:id}`}>
+            <NavLink key={index} to={`/singleproduct/${product.id}`}>
 
             <div  className="productCategory__details">
               <div className="productCategory__image">

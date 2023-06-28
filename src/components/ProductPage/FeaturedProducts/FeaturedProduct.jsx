@@ -34,6 +34,7 @@ const FeaturedProduct = () => {
                             return ( 
                               <ProductContainer 
                               key={index}
+                              id={product.id}
                               image={productImages.thumbnail}
                               title={productImages.title}
                               discountPercentage={productImages.discountPercentage}

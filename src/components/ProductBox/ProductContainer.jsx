@@ -2,9 +2,9 @@ import React from 'react'
 import "./ProductContainer.css"
 import { NavLink } from 'react-router-dom'
 
-const ProductContainer = ({image,title,discountPercentage, price, brand, rating, stock}) => {
+const ProductContainer = ({id,image,title,discountPercentage, price, brand, rating, stock}) => {
   return (
-    <NavLink to={`/singleproduct/:id`}>
+    <NavLink to={`/singleproduct/${id}`}>
 
        <div  className='eachProduct__details_container'>
                             <img  loading='lazy' className='productCategory__image' src={image} alt="" />

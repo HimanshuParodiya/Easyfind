@@ -26,6 +26,9 @@ const ProductProvider = ({ children }) => {
     limitedProducts: [],
     isLimitedLoading: false,
     isLimitedError: false,
+    singleProducts: {},
+    isSingleLoading: false,
+    isSingleError: false,
   };
 
   const [state, dispatch] = useReducer(productReducer, initialState); // now all the dispatch will call the action of reducer
@@ -54,6 +57,21 @@ const ProductProvider = ({ children }) => {
     //   console.log(limitedProductsData);
     } catch (error) {
       dispatch({ type: "LIMITED_PRODUCT_DATA_ERROR" });
+    }
+  };
+
+  const getSingleProducts = async (url) => {
+    dispatch({ type: "SET_SINGLE_LOADING" });
+    try {
+      const response = await axios.get(url);
+      const singleProduct = await response.data.products;
+      dispatch({
+        type: "SET_SINGLE_PRODUCTS_DATA",
+        payload: singleProduct,
+      });
+    //   console.log(limitedProductsData);
+    } catch (error) {
+      dispatch({ type: "SINGLE_PRODUCT_DATA_ERROR" });
     }
   };
 
@@ -107,7 +125,7 @@ const ProductProvider = ({ children }) => {
 
   return (
     <ProductContext.Provider
-      value={{ ...state, getUniqueValue, getLimitedProducts,handelInfiniteScroll,limits }}
+      value={{ ...state, getUniqueValue, getLimitedProducts,handelInfiniteScroll,limits ,getSingleProducts}}
     >
       {" "}
       {/* // here we are passing all the value inside state which is isLoading isError and so on  */}
