@@ -1,10 +1,11 @@
 import React from 'react'
 import './ProductsCategory.css'
 import { useProductContext } from '../../../State/context/ProductContext'
+import { BeatLoader} from 'react-spinners'
 
 const ProductsCategory = () => {
 
-  const {products,getUniqueValue} = useProductContext()
+  const {products,getUniqueValue,isLoading} = useProductContext()
   let uniqueCategory = getUniqueValue(products, "category");
 
   // console.log(uniqueCategory);z
@@ -35,6 +36,22 @@ const ProductsCategory = () => {
             </div>
           )
         })
+      }
+      {
+        isLoading &&
+        <div className="loadingIcon">
+        <BeatLoader
+
+        
+        // color={color}
+        // loading={loading}
+        // cssOverride={override}
+        // size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+          </div>
+
       }
     </div>
   )
