@@ -1,80 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import './FeaturedProduct.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { setLoading } from '../../../state/Slice/loadingSlice'
 import ProductContainer from '../../ProductBox/ProductContainer'
+import { useProductContext } from '../../../State/context/ProductContext'
+import { MagnifyingGlass } from 'react-loader-spinner'
 
 const FeaturedProduct = () => {
-    const loadingData = useSelector(state=> state.loading)
-    const dispatch = useDispatch()
-    const [products, setProducts] = useState([])
-    const [categoryUrl, setCategoryUrl] = useState('?limit=100')
-    let getProducts = async () => {
-      let productsData = await fetch(`https://dummyjson.com/products${categoryUrl}`)
-      let data = await productsData.json()
-      // console.log(data.products);
-  
-      // if there is data and product in data is true then add in products
-      if (data && data.products) {
-        //adding list of data into products array
-        setProducts(data.products)
-      }
-    }
-    // getting the unique value form array 
-    let getUniqueValue = (datasArray, property) => {
-      // mapping throught the given array 
-      let getValue = datasArray.map((dataArray) => {
-        // returning all the items with property  
-        return dataArray[property] // this [] is showing computed value here
-      })
-  
-      // creating set and passing the returing value to it and making it an unique value
-      let uniqueValue = [...new Set(getValue)]
-      // returning the array of unique value from this function
-      return uniqueValue;
-    }
-  
-    // creating an unique value for category from products array 
-    let uniqueCategory = getUniqueValue(products, "category");
-  
-    
-    const handelInfiniteScroll = async () => {
-      // console.log("scrollHeight" + document.documentElement.scrollHeight);
-      // console.log("innerHeight" + window.innerHeight);
-      // console.log("scrollTop" + document.documentElement.scrollTop);
-      try {
-        if (
-          window.innerHeight + document.documentElement.scrollTop + 1 >=
-          document.documentElement.scrollHeight 
-        ) {
-        }
-      } catch (error) {
-        console.log(error);
-      }
+  const {limitedProducts,getLimitedProducts ,getUniqueValue,isLimitedLoading,handelInfiniteScroll,limits } = useProductContext()
+  // creating an unique value for category from products array 
+  let uniqueCategory = getUniqueValue(limitedProducts, "category");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await getLimitedProducts(limits);
     };
+  
+    window.addEventListener("scroll", handelInfiniteScroll);
+    fetchData();
     
-    
-    
-    
-    // console.log(limits);
-    useEffect(() => {
-      const fetchData = async () => {
-        dispatch(setLoading(true));
-        await getProducts();
-        dispatch(setLoading(false));
-      };
-    
-      window.addEventListener("scroll", handelInfiniteScroll);
-      fetchData();
-      
-      return () => window.removeEventListener("scroll", handelInfiniteScroll);
-    }, []);
+    return () => window.removeEventListener("scroll", handelInfiniteScroll);
+  }, [limits]);
+
   
   return (
     <div >
      {
         uniqueCategory.map((category, index)=>{
-            let product = products.filter((item)=> item.category === category) 
+            let product = limitedProducts.filter((item)=> item.category === category) 
             
             return (
                 <div className='featuredProduct' key={index}>
@@ -99,6 +50,19 @@ const FeaturedProduct = () => {
             )
         })
      } 
+      {
+        isLimitedLoading &&
+        <div className="loadingIcon">
+
+        <MagnifyingGlass
+        height="80"
+        width="80"
+        ariaLabel="MagnifyingGlass-loading"
+        glassColor = '#c0efff'
+        color = '#111'
+        />
+        </div>
+      }
     </div>
   )
 }
