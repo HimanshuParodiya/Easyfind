@@ -8,6 +8,7 @@ import Product from './components/ProductPage/Product'
 import {  BrowserRouter as Router, Route, Routes,  } from 'react-router-dom'
 import Service from './components/ServicePage/Service'
 import Cart from './components/CartPage/Cart'
+import SingleProduct from './components/SingleProducts/SingleProduct'
 
 
 
@@ -43,6 +44,7 @@ function App() {
         <Route exact="true" path='/' element={ <Home />} />
         <Route path='/products' element={<Product />} />  
         <Route path='/services' element={<Service />} />  
+        <Route path='/singleproduct/:id' element={<SingleProduct />} />  
         <Route path='/cart' element={<Cart />} />  
         </Routes>
       <Footer />

@@ -2,6 +2,7 @@ import React from 'react'
 import './ProductsCategory.css'
 import { useProductContext } from '../../../State/context/ProductContext'
 import { BeatLoader} from 'react-spinners'
+import { NavLink } from 'react-router-dom'
 
 const ProductsCategory = () => {
 
@@ -24,7 +25,9 @@ const ProductsCategory = () => {
           
 
           return (
-            <div key={index} className="productCategory__details">
+            <NavLink key={index} to={`/singleproduct/:id}`}>
+
+            <div  className="productCategory__details">
               <div className="productCategory__image">
                 {/* getting the thumbnail whose category get matched  */}
                 <img loading='lazy' src={product.thumbnail} alt="img" />
@@ -34,6 +37,7 @@ const ProductsCategory = () => {
                 {category}
               </div>
             </div>
+            </NavLink>
           )
         })
       }
