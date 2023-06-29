@@ -22,3 +22,28 @@
 .singleProduct__title{
     color: rgb(98 84 243);
 }
+@media only screen and (max-width: 600px) {
+
+    .singleProductHeading__container{
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    .goBack__link{
+        margin-right: 5px;
+        
+    }
+    
+    
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .singleProductHeading__container{
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    .goBack__link{
+        margin-right: 5px;
+        
+    }
+
+}

@@ -96,3 +96,29 @@
     }
     
 }
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .footer__container{
+        height: 40vh;
+    }
+    .footer_logo{
+        height: 150px;
+        width: 150px;
+    }
+    .footer_name{
+        font-size: 15px;
+        border-top: 1px solid gray;
+    }
+    .footer_contact{
+        margin-bottom: 10px;
+    }
+    .footer_bottom{
+        font-size: 14px;
+        padding: 10px;
+    }
+    .footerContact_p{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+}

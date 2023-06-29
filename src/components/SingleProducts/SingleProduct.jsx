@@ -69,11 +69,14 @@ const SingleProduct = () => {
           </div>
         <div className="singleProduct_data">
           <p className="singleProduct_title">{title}</p>
+          <p className="singleProduct_brandName">
+              By :<span> {brand} </span>
+            </p>
           <p className="singleProduct_description">{description}</p>
 
           <div className="singleProduct_Discount_Price">
             <p className="singleProduct_Discount">-{discountPercentage}%</p>
-            <p>on</p>
+            <p>Now</p>
           <p className="singleProduct_Price">${price}</p>
            
           </div>
@@ -96,22 +99,22 @@ const SingleProduct = () => {
           <div className="singleProduct_service">
             <div className="singleProduct_warrantyData">
               <TbTruckDelivery className="warranty_icon" />
-              <p>Free Delivery</p>
+              <p className="warrantyicon_details">Free Delivery</p>
             </div>
 
             <div className="singleProduct_warrantyData">
               <TbReplace className="warranty_icon" />
-              <p>30 Days Replacement</p>
+              <p className="warrantyicon_details">30 Days Replacement</p>
             </div>
 
             <div className="singleProduct_warrantyData">
               <TbTruckDelivery className="warranty_icon" />
-              <p>Easy Delivered </p>
+              <p className="warrantyicon_details">Easy Delivered </p>
             </div>
 
             <div className="singleProduct_warrantyData">
               <MdSecurity className="warranty_icon" />
-              <p>2 Year Warranty </p>
+              <p className="warrantyicon_details">2 Year Warranty </p>
             </div>
           </div>
 
@@ -121,9 +124,7 @@ const SingleProduct = () => {
               <span> {stock > 0 ? `In Stock ${stock}` : "Not Available"}</span>
             </p>
            
-            <p>
-              By :<span> {brand} </span>
-            </p>
+          
           </div>
             <SingleProductQuantity stock={stock} />
             <div className="singleProduct_button">
