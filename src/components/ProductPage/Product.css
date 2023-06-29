@@ -1,13 +1,14 @@
 .product_container{
     padding-top: 80px;
+    display: flex;
     
     
 }
 .product_category_section{
     height: 100%;
     width: 20%;
-    position: fixed;
-
+    position: sticky;
+    top: 90px;
 }
 .product_category_section::-webkit-scrollbar{
     display: none;

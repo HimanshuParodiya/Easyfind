@@ -1,0 +1,23 @@
+.singleProductImage_container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.singleProductImage_small{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+.singleProductImage_container img{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.singleProductImage_big{
+   height: 500px;
+   width: 500px;
+}

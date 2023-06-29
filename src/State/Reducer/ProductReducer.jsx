@@ -24,7 +24,7 @@ const productReducer = (state, action) => {
         limitedProducts: action.payload,
       };
 
-    case "LIMITED_PRODUCT_DATA_ERROR ":
+    case "LIMITED_PRODUCT_DATA_ERROR":
       return { ...state, isLimitedLoading: false, isLimitedError: true };
 
 
@@ -35,10 +35,10 @@ const productReducer = (state, action) => {
       return {
         ...state,
         isSingleLoading: false,
-        limitedProducts: action.payload,
+        singleProducts: action.payload,
       };
 
-    case "SINGLE_PRODUCT_DATA_ERROR ":
+    case "SINGLE_PRODUCT_DATA_ERROR":
       return { ...state, isSingleLoading: false, isSingleError: true };
 
     default:
