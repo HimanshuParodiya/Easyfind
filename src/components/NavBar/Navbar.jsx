@@ -124,9 +124,7 @@ const Navbar = () => {
                       activeclassname="active"
                       exact="true"
                       to="/"
-                      className={`${
-                        showNavbar ? "color_white" : "color_black"
-                      }`}
+                      className="color_black"
                     >
                       Home
                     </NavLink>
@@ -135,9 +133,7 @@ const Navbar = () => {
                     <NavLink
                       activeclassname="active"
                       to="/products"
-                      className={`${
-                        showNavbar ? "color_white" : "color_black"
-                      }`}
+                      className="color_black"
                     >
                       Products
                     </NavLink>
@@ -146,9 +142,7 @@ const Navbar = () => {
                     <NavLink
                       activeclassname="active"
                       to="/services"
-                      className={`${
-                        showNavbar ? "color_white" : "color_black"
-                      }`}
+                      className="color_black"
                     >
                       Service
                     </NavLink>

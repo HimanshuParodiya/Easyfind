@@ -150,11 +150,12 @@
     z-index: -1;
     position: absolute;
     right: -60vw;
-    top: 0;
-    height: 100vh;
+    top: 10vh;
+    height: 90vh;
     width: 100vw;
-    backdrop-filter: blur(30px);
-  }
+    background-color: #F4F4F2;
+}
+ 
   .sideMenu .side_menu_section{
     margin-top: 15vh;
   }
@@ -193,17 +194,16 @@
         display: block;
     }
     
-  .sideMenu{
-    display: none;
-    z-index: -1;
-    position: absolute;
-    right: -60vw;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    backdrop-filter: blur(30px);
-    
-  }
+    .sideMenu{
+        display: none;
+        z-index: -1;
+        position: absolute;
+        right: -60vw;
+        top: 10vh;
+        height: 90vh;
+        width: 100vw;
+        background-color: #F4F4F2;
+    }
   .sideMenu .side_menu_section{
     margin-top: 15vh;
   }
