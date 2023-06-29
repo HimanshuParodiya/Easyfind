@@ -10,6 +10,7 @@ import StarRating from "./StarRating";
 import { MagnifyingGlass } from "react-loader-spinner";
 import { BeatLoader } from "react-spinners";
 import GoToTop from "../../utils/GoToTop";
+import SingleProductQuantity from "./SingleProductQuantity/SingleProductQuantity";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -124,6 +125,11 @@ const SingleProduct = () => {
               By :<span> {brand} </span>
             </p>
           </div>
+            <SingleProductQuantity stock={stock} />
+            <div className="singleProduct_button">
+
+            <button className="singleProduct_addToCartButton">Add To Cart</button>
+            </div>
         </div>
       </div>
       </div>

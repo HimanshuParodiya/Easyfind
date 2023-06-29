@@ -1,0 +1,29 @@
+.singleProductQuantity_container{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+.increaseQuantity{
+    flex: 0.1;
+}
+.singleProductQuantity_quantity{
+    text-align: center;
+    flex: 0.1;
+}
+.decreaseQuantity{
+    flex: 0.1;
+}
+.quantityAlert{
+    flex: 0.7;
+    margin-left: 20px;
+    color: red;
+}
+
+.singleProductQuantity_button{
+    background-color: rgb(98 84 243);
+    outline-color: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

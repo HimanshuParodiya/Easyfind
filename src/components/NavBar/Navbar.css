@@ -116,6 +116,7 @@
 
 .hamburger{
     display: none;
+    cursor: pointer;
 }
 
 .navbar .navbar_menu .add_to_cart{

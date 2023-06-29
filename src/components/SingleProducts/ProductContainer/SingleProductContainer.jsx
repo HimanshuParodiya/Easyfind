@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './SingleProductContainer.css'
-import "../SingleProduct.css";
 
 const SingleProductContainer = ({ images, thumbnail }) => {
   const [mainImage, setMainImage] = useState(thumbnail); //by default the url will be the same as 0th index
