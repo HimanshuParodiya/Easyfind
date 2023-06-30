@@ -1,19 +1,18 @@
-
-.productCategory__image_container{
+.productCategory__image_container {
     cursor: pointer;
     height: 300px;
     width: 300px;
     margin-bottom: 20px;
 }
 
-.productCategory__image_container img.productCategory__image{
-    transition: scale 0.255s ease-in ;
+.productCategory__image_container img.productCategory__image {
+    transition: scale 0.255s ease-in;
     height: 100%;
     width: 100%;
     margin: 0;
 }
 
-.eachProduct__details_container{
+.eachProduct__details_container {
     display: flex;
     flex-direction: column;
     margin: 20px 20px;
@@ -21,7 +20,7 @@
 }
 
 
-.eachProduct__detail{
+.eachProduct__detail {
     width: 300px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     padding: 0 5px;
@@ -33,111 +32,140 @@
 }
 
 
-.eachProduct__detail span{
+.eachProduct__detail span {
     font-size: 14px;
     cursor: pointer;
     display: inline-block;
     padding: 2px;
-    
+
 }
-.eachProduct_rating_brand   
-{
+
+.eachProduct_rating_brand {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.bold{
+
+.bold {
     font-weight: 600;
 
 }
-.bold_semi{
+
+.bold_semi {
     font-weight: 500;
 }
 
 
-.eachProduct_price_discount{
+.eachProduct_price_discount {
     display: flex;
     justify-content: space-between;
 }
-.eachProduct_total_discount{
+
+.eachProduct_total_discount {
     text-decoration: line-through;
     margin-left: 10px;
 }
-span.discount_value{
+
+span.discount_value {
     font-size: 15px;
     color: red;
 }
-span.eachProduct_price{
+
+span.eachProduct_price {
     font-size: 15px;
     color: green;
 }
 
-.loadingIcon{
+.loadingIcon {
     text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
-    .eachRow_deatils img.productCategory__image{
+    .productCategory__image_container {
+        cursor: pointer;
         height: 200px;
-        width: 250px;
-        border: 1px solid #000;
-        object-fit: cover;
+        width: 200px;
+        margin-bottom: 10px;
     }
-    
-    .eachProduct__details_container{
+
+    .productCategory__image_container img.productCategory__image {
+        transition: scale 0.255s ease-in;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .eachProduct__details_container {
         margin: 10px 10px;
     }
-    .eachProduct__detail{
-        width: 250px;
+
+    .eachProduct__detail {
+        width: 200px;
         padding: 0 3px;
     }
-    .eachProduct__detail span{
+
+    .eachProduct__detail span {
         font-size: 11px;
         cursor: pointer;
         display: inline-block;
         padding: 2px;
-        
+
     }
-    span.discount_value{
+
+    span.discount_value {
         font-size: 13px;
         color: red;
     }
-    span.eachProduct_price{
+
+    span.eachProduct_price {
         font-size: 13px;
         color: green;
     }
-    .eachProduct_title{
+
+    .eachProduct_title {
         font-size: 14px;
     }
-    
-    
+
+
 }
 
-@media (min-width:601px) and (max-width:768px){
-    .eachRow_deatils img.productCategory__image{
-        height: 200px;
+@media (min-width:601px) and (max-width:768px) {
+    .productCategory__image_container {
+        cursor: pointer;
+        height: 250px;
         width: 250px;
+        margin-bottom: 10px;
     }
-    
-    .eachProduct__details_container{
+
+    .productCategory__image_container img.productCategory__image {
+        transition: scale 0.255s ease-in;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    .eachProduct__details_container {
         margin: 10px 10px;
     }
-    .eachProduct__detail{
+
+    .eachProduct__detail {
         width: 250px;
         padding: 0 3px;
     }
-    .eachProduct__detail span{
+
+    .eachProduct__detail span {
         font-size: 11px;
         cursor: pointer;
         display: inline-block;
         padding: 2px;
-        
+
     }
-    span.discount_value{
+
+    span.discount_value {
         font-size: 13px;
         color: red;
     }
-    span.eachProduct_price{
+
+    span.eachProduct_price {
         font-size: 13px;
         color: green;
     }

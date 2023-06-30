@@ -48,28 +48,29 @@
         padding: 0 5px;
     }
     .productCategory__details .productCategory__image {
-        width: 130px;
-        height: 80px;
+        width: 100px;
+        height: 50px;
         margin: 20px 0;
     }
     .productCategory__name{
         font-size: 12px;
     }
+
 }
 
 
 @media (min-width: 600px) and (max-width: 768px) {
     .productsCategory__container{
-        height: 200px;
+        height: 160px;
         gap: 5px;
     } 
+    .productCategory__details .productCategory__image {
+        width: 130px;
+        height: 80px;
+        margin: 20px 0;
+    }
     .productsCategory__container .productCategory__details{
         padding: 0 5px;
-    }
-    .productCategory__details .productCategory__image {
-        width: 100px;
-        height: 50px;
-        margin: 20px 0;
     }
     .productCategory__name{
         font-size: 12px;

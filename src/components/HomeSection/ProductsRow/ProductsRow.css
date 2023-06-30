@@ -27,7 +27,7 @@ h5.productCategory__name{
 
 @media only screen and (max-width: 600px) {
     .productsRow__container{
-        max-width: 100%;
+        max-width: 95%;
     }
     .productsRow__container__heading{
         font-size: 24px;
@@ -39,6 +39,44 @@ h5.productCategory__name{
     }
     h5.productCategory__name{
         font-size: 16px;
+        margin: 0px 0 0 20px;
+    }
+    
+    
+.eachRow_deatils img.productCategory__image{
+    height: 200px;
+    width: 200px;
+}
+.eachProduct__details_container{
+    margin: 10px 10px;
+}
+
+.eachProduct__detail span{
+    font-size: 10px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 2px;
+    
+}
+
+
+}
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .productsRow__container{
+        max-width: 95%;
+    }
+    .productsRow__container__heading{
+        font-size: 20px;
+
+    }
+    .eachRow_deatils{
+        gap: 0.5rem;
+        margin: 0 0.5rem 1rem 0.1rem;
+    }
+    h5.productCategory__name{
+        font-size: 18px;
         margin: 0px 0 0 20px;
     }
     

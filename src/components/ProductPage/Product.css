@@ -1,13 +1,14 @@
 .product_container {
     padding-top: 80px;
     display: flex;
-
-
+    
+    
 }
 
 .product_category_section {
     height: 100%;
     width: 20%;
+    padding: 0 20px 0 10px;
     position: sticky;
     top: 90px;
 }
@@ -29,14 +30,16 @@
     }
 
     .product_category_section {
-        width: 90%;
+        width: 100%;
         top: 80px;
         background: #F4F4F2;
-        left: 2.5%;
+        left: 0%;
+    padding: 0 20px 0 0px;
+
     }
 
     .product_featured {
-        width: 75%;
+        width: 90%;
         margin: 0 auto;
 
     }
@@ -50,14 +53,16 @@
     }
 
     .product_category_section {
-        width: 90%;
+        width: 100%;
         top: 80px;
         background: #F4F4F2;
-        left: 2.5%;
+        left: 0%;
+    padding: 0 20px 0 0px;
+
     }
 
     .product_featured {
-        width: 75%;
+        width: 95%;
         margin: 0 auto;
 
     }
