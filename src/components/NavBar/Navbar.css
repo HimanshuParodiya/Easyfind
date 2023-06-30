@@ -150,8 +150,8 @@
     z-index: -1;
     position: absolute;
     right: -60vw;
-    top: 10vh;
-    height: 90vh;
+    top: 9vh;
+    height: 91vh;
     width: 100vw;
     background-color: #F4F4F2;
 }
@@ -199,8 +199,8 @@
         z-index: -1;
         position: absolute;
         right: -60vw;
-        top: 10vh;
-        height: 90vh;
+        top: 9vh;
+        height: 91vh;
         width: 100vw;
         background-color: #F4F4F2;
     }

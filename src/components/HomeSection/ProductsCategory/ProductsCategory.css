@@ -41,7 +41,26 @@
 
 @media only screen and (max-width: 600px) {
     .productsCategory__container{
-        height: 130px;
+        height: 150px;
+        gap: 5px;
+    } 
+    .productsCategory__container .productCategory__details{
+        padding: 0 5px;
+    }
+    .productCategory__details .productCategory__image {
+        width: 130px;
+        height: 80px;
+        margin: 20px 0;
+    }
+    .productCategory__name{
+        font-size: 12px;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .productsCategory__container{
+        height: 200px;
         gap: 5px;
     } 
     .productsCategory__container .productCategory__details{

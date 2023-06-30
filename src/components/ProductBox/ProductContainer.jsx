@@ -3,6 +3,13 @@ import "./ProductContainer.css"
 import { NavLink } from 'react-router-dom'
 
 const ProductContainer = ({id,image,title,discountPercentage, price, brand, rating, stock}) => {
+  const handleLength = (word) =>{
+    if (word.length > 20) {
+      return word.slice(0,15).concat("....")
+
+    }
+    return word
+  }
   return (
     <NavLink to={`/singleproduct/${id}`}>
 
@@ -10,7 +17,7 @@ const ProductContainer = ({id,image,title,discountPercentage, price, brand, rati
                             <img  loading='lazy' className='productCategory__image' src={image} alt="" />
                             <div className="eachProduct__detail">
                               <div className="eachProduct_name_price_discount">
-                                <div className='bold eachProduct_title'>{title}</div>
+                                <div className='bold eachProduct_title'>{handleLength(title)}</div>
                                 <div className="eachProduct_price_discount">
                                   <div className="discount_on_value_box">
                                     <span className='discount_value'>{discountPercentage}%</span>
