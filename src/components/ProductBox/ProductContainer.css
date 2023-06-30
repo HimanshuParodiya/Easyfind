@@ -1,8 +1,16 @@
-.eachRow_deatils img.productCategory__image{
+
+.productCategory__image_container{
     cursor: pointer;
-    margin-top: 1px;
     height: 300px;
     width: 300px;
+    margin-bottom: 20px;
+}
+
+.productCategory__image_container img.productCategory__image{
+    transition: scale 0.255s ease-in ;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 .eachProduct__details_container{

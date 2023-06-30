@@ -91,7 +91,7 @@ const ProductProvider = ({ children }) => {
       type: "SET_CATEGORY_PRODUCTS_DATA",
       payload: categoruProduct,
     });
-    console.log(categoruProduct);
+    // console.log(categoruProduct);
   } catch (error) {
     dispatch({ type: "CATEGORY_PRODUCT_DATA_ERROR" });
   }
@@ -126,7 +126,7 @@ const ProductProvider = ({ children }) => {
           setLimits((prev) => Math.min(prev + 10, 100));
         }
       } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   
