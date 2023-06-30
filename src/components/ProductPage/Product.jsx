@@ -3,10 +3,12 @@ import './Product.css'
 import ProductCategoryList from './ProductCategoryList/ProductCategoryList'
 import FeaturedProduct from './FeaturedProducts/FeaturedProduct'
 import GoToTop from '../../utils/GoToTop'
+import { useProductContext } from '../../State/context/ProductContext'
 
 
 
 const Product = () => {
+  const {limitedProducts,getLimitedProducts,isLimitedLoading } = useProductContext()
 
 
 
@@ -16,7 +18,7 @@ const Product = () => {
         <ProductCategoryList />
       </div>
       <div className="product_featured">
-      <FeaturedProduct />
+      <FeaturedProduct products={limitedProducts} getProducts={getLimitedProducts} loading={isLimitedLoading} />
       </div>
       <GoToTop />
     </div>

@@ -35,7 +35,7 @@ const ProductContainer = ({id,image,title,discountPercentage, price, brand, rati
                               </div>
 
                               <div className="eachProduct_rating_brand">
-                                <span className='bold_semi'>Brand: {brand}</span>
+                                <span className='bold_semi'>by: {handleLength(brand)}</span>
                                 <span className='bold_semi'>⭐ {rating}</span>
                               </div>
 

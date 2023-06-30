@@ -31,8 +31,10 @@
 .categories{
     padding: 20px 10%;
     margin-bottom: 5px;
+    color: #111;
     cursor: pointer;
     transition: all 0.255s;
+    display: block;
 }
 
 .categories:hover{
@@ -43,16 +45,11 @@
 
 
 .categories:last-child{
-    /* border: 1px solid red; */
     border-bottom:none;
 }
 
 
 
-
-.categories a{
-    color: #111;
-}
 
 @media only screen and (max-width: 600px) {
     .ProductCategory__container{

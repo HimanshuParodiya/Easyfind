@@ -41,6 +41,20 @@ const productReducer = (state, action) => {
     case "SINGLE_PRODUCT_DATA_ERROR":
       return { ...state, isSingleLoading: false, isSingleError: true };
 
+
+    case "SET_CATEGORY_LOADING":
+      return { ...state, isCategoryLoading: true };
+
+    case "SET_CATEGORY_PRODUCTS_DATA":
+      return {
+        ...state,
+        isCategoryLoading: false,
+        categoryProduct: action.payload,
+      };
+
+    case "CATEGORY_PRODUCT_DATA_ERROR":
+      return { ...state, isCategoryLoading: false, isCategoryError: true };
+
     default:
       return state;
   }

@@ -3,6 +3,7 @@
     overflow-x: scroll;
     display: flex;
     scroll-behavior: smooth;
+    margin-top: 10px;
     }
 .featuredProduct::-webkit-scrollbar{
     display: none;

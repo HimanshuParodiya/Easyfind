@@ -4,14 +4,14 @@ import ProductContainer from '../../ProductBox/ProductContainer'
 import { useProductContext } from '../../../State/context/ProductContext'
 import { MagnifyingGlass } from 'react-loader-spinner'
 
-const FeaturedProduct = () => {
-  const {limitedProducts,getLimitedProducts ,getUniqueValue,isLimitedLoading,handelInfiniteScroll,limits } = useProductContext()
+const FeaturedProduct = ({products,getProducts,loading}) => {
+  const {getUniqueValue,handelInfiniteScroll,limits } = useProductContext()
   // creating an unique value for category from products array 
-  let uniqueCategory = getUniqueValue(limitedProducts, "category");
+  let uniqueCategory = getUniqueValue(products, "category");
 
   useEffect(() => {
     const fetchData = async () => {
-      await getLimitedProducts(limits);
+      await getProducts(limits);
     };
   
     window.addEventListener("scroll", handelInfiniteScroll);
@@ -25,7 +25,7 @@ const FeaturedProduct = () => {
     <div >
      {
         uniqueCategory.map((category, index)=>{
-            let product = limitedProducts.filter((item)=> item.category === category) 
+            let product = products.filter((item)=> item.category === category) 
             
             return (
                 <div className='featuredProduct' key={index}>
@@ -54,7 +54,7 @@ const FeaturedProduct = () => {
         })
      } 
       {
-        isLimitedLoading &&
+        loading &&
         <div className="loadingIcon">
 
         <MagnifyingGlass
