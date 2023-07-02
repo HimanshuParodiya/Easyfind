@@ -1,0 +1,12 @@
+.serviceData_container{
+    text-align: center;
+}
+.serviceData_data{
+    font-size: 40px;
+    color: green;
+}
+.serviceData_title{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}

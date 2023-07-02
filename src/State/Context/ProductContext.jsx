@@ -119,7 +119,7 @@ const ProductProvider = ({ children }) => {
     // console.log("scrollTop" + document.documentElement.scrollTop);
     try {
       if (
-        window.innerHeight + document.documentElement.scrollTop + 1 >=
+        window.innerHeight + document.documentElement.scrollTop + 200 >=
         document.documentElement.scrollHeight &&
         limits < 100
         ) {

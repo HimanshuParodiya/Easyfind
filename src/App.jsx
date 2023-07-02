@@ -10,6 +10,7 @@ import Service from './components/ServicePage/Service'
 import Cart from './components/CartPage/Cart'
 import SingleProduct from './components/SingleProducts/SingleProduct'
 import CategoryProduct from './components/ProductPage/CategoryProduct/CategoryProduct'
+import ErrorPage from './components/ErrorPage/ErrorPage'
 
 
 
@@ -49,6 +50,8 @@ function App() {
         <Route exact path='/services' element={<Service />} />  
         <Route exact path='/singleproduct/:id' element={<SingleProduct />} />  
         <Route exact path='/cart' element={<Cart />} />  
+        <Route exact path='*' element={<ErrorPage />} />  
+        
         </Routes>
       <Footer />
       </Router>

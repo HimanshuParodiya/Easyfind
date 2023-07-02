@@ -1,0 +1,14 @@
+.serviceSection_container{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+.serviceSection_row{
+    display: flex;
+    justify-content: space-around;
+}
+.serviceSection_bottomRow{
+    justify-content: space-evenly;
+}   
