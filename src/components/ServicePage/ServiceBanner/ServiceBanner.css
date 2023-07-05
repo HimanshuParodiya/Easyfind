@@ -1,0 +1,30 @@
+
+.service_banner{
+    width: 100%;
+    /* background-color: black; */
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.service_banner .service_banner_heading{
+    flex: 0.4;    
+    font-size: 50px;
+    margin: 0 auto ;
+}
+
+.service_banner img{
+    flex: 0.5;    
+    /* object-fit: contain; */
+    width: 50%;
+    height: 100%;
+}
+
+.typedWord{
+    display: block;
+    height: 80px;
+    color: #2F79BE;
+}

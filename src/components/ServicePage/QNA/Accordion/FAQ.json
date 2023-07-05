@@ -1,0 +1,45 @@
+{
+    "faqs": [
+      {
+        "id": 1,
+        "question": "What payment methods do you accept?",
+        "answer": "We accept credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers."
+      },
+      {
+        "id": 2,
+        "question": "How long does shipping take?",
+        "answer": "Shipping times vary depending on your location. Typically, it takes 3-5 business days for domestic orders and 7-10 business days for international orders."
+      },
+      {
+        "id": 3,
+        "question": "Do you offer returns or exchanges?",
+        "answer": "Yes, we have a hassle-free return and exchange policy. If you're not satisfied with your purchase, you can return it within 30 days for a refund or exchange."
+      },
+      {
+        "id": 4,
+        "question": "Is my personal information secure?",
+        "answer": "Absolutely! We prioritize the security of our customers' information. We use industry-standard encryption and follow strict privacy practices to ensure your data is safe."
+      },
+      {
+        "id": 5,
+        "question": "Can I track my order?",
+        "answer": "Yes, once your order is shipped, we'll provide you with a tracking number. You can use this tracking number to monitor the progress of your shipment."
+      },
+      {
+        "id": 6,
+        "question": "Do you offer international shipping?",
+        "answer": "Yes, we ship internationally to most countries. Additional shipping fees and customs duties may apply depending on your location."
+      },
+      {
+        "id": 7,
+        "question": "What is your warranty policy?",
+        "answer": "We offer a 1-year warranty on all our products. If you encounter any defects or issues within the warranty period, please contact our customer support for assistance."
+      },
+      {
+        "id": 8,
+        "question": "How can I contact customer support?",
+        "answer": "You can reach our customer support team via email at support@example.com or by calling our toll-free number during business hours."
+      }
+    ]
+  }
+  

@@ -1,0 +1,31 @@
+.accordion_container{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accordion_question{
+    cursor: pointer;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion_answer{
+    width: 35%;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+.accordion_sNo{
+    flex: 0.05;
+}
+.accordion_data{
+    
+    flex: 0.5;
+}
+.accordion_logo{
+    flex: 0.4;
+    text-align: right;
+}

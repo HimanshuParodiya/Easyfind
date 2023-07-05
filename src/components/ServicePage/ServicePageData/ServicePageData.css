@@ -1,0 +1,44 @@
+.serviceData_container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.icon_serialNo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.service_serialNo{
+    margin-right: 20px;
+}
+
+.divider_description{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+.divider_container{
+    flex: 0.5;
+    display: flex;
+    justify-content:right;
+
+}
+
+.divider{
+    height: 250px;
+    width: 2px;
+    /* background-color: #111; */
+}
+
+.serviceData_description{
+    margin: auto;
+    flex: 0.5;
+}
+.serviceData_description p{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
