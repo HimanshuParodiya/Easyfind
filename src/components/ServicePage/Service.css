@@ -3,10 +3,8 @@
 }
 .servicePoints_container
 {
-    /* background-color: #111; */
-    /* color: white; */
-    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
     margin-top: 10px;
+    
 }
 .service_image{
     font-size: 50px;
@@ -17,7 +15,8 @@
     border: 2px solid #111;
     border-radius: 50%;
     padding: 5px 15px;
-    margin-left: 20p;
+    margin-right: 20px;
+
 }
 .service_icon{
 

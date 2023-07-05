@@ -17,7 +17,9 @@ const ProductProvider = ({ children }) => {
   const API = "https://dummyjson.com/products?limit=100";
   const CATEGORY_API = `https://dummyjson.com/products`
   const [limits, setLimits] = useState(10)
-
+  const [mobileScreen, setmobileScreen] = useState(false)
+  
+ 
 
 
   // use reducer return 2 element of array
@@ -146,10 +148,31 @@ const ProductProvider = ({ children }) => {
     getCategoryWiseProduct(`${CATEGORY_API}/category/${productCategory}`)
 
 }, [productCategory])
+useEffect(() => {
+  // adding eventlistener for scroll and execute the function which will check if scroll is more than 100
+  window.addEventListener("resize", ()=>{
+      if (window.innerWidth < 600) {
+        setmobileScreen(true);
+      } else {
+        setmobileScreen(false);
+      }
+  });
+
+  return () => {
+    // removeing eventlistener
+    window.removeEventListener("resize", ()=>{
+      if (window.screenX < 600) {
+        setmobileScreen(true);
+      } else {
+        setmobileScreen(false);
+      }
+  });
+  };
+}, [mobileScreen]);
 
   return (
     <ProductContext.Provider
-      value={{ ...state, getUniqueValue, getLimitedProducts,handelInfiniteScroll,limits ,getSingleProducts,getCategoryWiseProduct,setProductCategory}}
+      value={{ ...state, getUniqueValue, getLimitedProducts,handelInfiniteScroll,limits ,getSingleProducts,getCategoryWiseProduct,setProductCategory, mobileScreen}}
     >
       {" "}
       {/* // here we are passing all the value inside state which is isLoading isError and so on  */}

@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1C1E26; /* Optional: Add a background color for the preloader */
+    background-color: #000; /* Optional: Add a background color for the preloader */
   }
   
   .preloader__video {

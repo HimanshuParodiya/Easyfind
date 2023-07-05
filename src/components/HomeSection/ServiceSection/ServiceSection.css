@@ -4,6 +4,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
 }
 .serviceSection_row{
     display: flex;
