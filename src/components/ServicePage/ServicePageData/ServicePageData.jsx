@@ -1,11 +1,9 @@
 import React from "react";
 import "./ServicePageData.css";
 import { motion } from "framer-motion"
-import { useProductContext } from "../../../State/Context/ProductContext";
 
 const ServicePageData = ({ icon, sNo, divider, content, description , descriptionAnimation}) => {
 
-  console.log(descriptionAnimation);
   return (
     <>
       <div className="serviceData_container">

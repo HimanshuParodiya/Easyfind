@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Product.css'
 import ProductCategoryList from './ProductCategoryList/ProductCategoryList'
 import FeaturedProduct from './FeaturedProducts/FeaturedProduct'
@@ -8,7 +8,7 @@ import { useProductContext } from '../../State/context/ProductContext'
 
 
 const Product = () => {
-  const {limitedProducts,getLimitedProducts,isLimitedLoading } = useProductContext()
+  const {limitedProducts,isLimitedLoading } = useProductContext()
 
 
 
@@ -18,7 +18,7 @@ const Product = () => {
         <ProductCategoryList />
       </div>
       <div className="product_featured">
-      <FeaturedProduct products={limitedProducts} getProducts={getLimitedProducts} loading={isLimitedLoading} />
+      <FeaturedProduct products={limitedProducts}  loading={isLimitedLoading} />
       </div>
       <GoToTop />
     </div>

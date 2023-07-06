@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Service.css";
 import {TbTruckDelivery } from "react-icons/tb";
 import { FcApproval, FcCustomerSupport } from "react-icons/fc";
@@ -8,7 +8,7 @@ import GoToTop from "../../utils/GoToTop";
 import ServicePageData from "./ServicePageData/ServicePageData";
 import ServiceBanner from "./ServiceBanner/ServiceBanner";
 import QNA from "./QNA/QNA";
-import { useProductContext } from "../../State/Context/ProductContext";
+import { useProductContext } from "../../State/context/ProductContext";
 
 
 const Service = () => {

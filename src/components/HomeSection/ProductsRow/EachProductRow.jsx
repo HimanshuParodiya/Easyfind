@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './ProductsRow.css'
 import { MagnifyingGlass } from 'react-loader-spinner'
 import ProductContainer from '../../ProductBox/ProductContainer'

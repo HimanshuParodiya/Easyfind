@@ -17,8 +17,8 @@ const SingleProduct = () => {
   const API = "https://dummyjson.com/products";
   const { getSingleProducts, singleProducts, isSingleLoading } =
     useProductContext();
-
-  // console.log(`${API}/${id}`);
+    
+    // console.log(`${API}/${id}`);
   // console.log(singleProducts);
   // addressing id with productId because there is so many id
   // console.log(id);
@@ -111,11 +111,13 @@ const SingleProduct = () => {
               <TbTruckDelivery className="warranty_icon" />
               <p className="warrantyicon_details">Easy Delivered </p>
             </div>
-
-            <div className="singleProduct_warrantyData">
-              <MdSecurity className="warranty_icon" />
-              <p className="warrantyicon_details">2 Year Warranty </p>
-            </div>
+              {
+                category != "groceries"&&
+                  <div className="singleProduct_warrantyData">
+                    <MdSecurity className="warranty_icon" />
+                    <p className="warrantyicon_details">2 Year Warranty </p>
+                  </div>
+              }
           </div>
 
           <div className="singleProduct_info">

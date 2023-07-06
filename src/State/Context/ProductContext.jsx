@@ -93,7 +93,7 @@ const ProductProvider = ({ children }) => {
       type: "SET_CATEGORY_PRODUCTS_DATA",
       payload: categoruProduct,
     });
-    // console.log(categoruProduct);
+
   } catch (error) {
     dispatch({ type: "CATEGORY_PRODUCT_DATA_ERROR" });
   }
@@ -172,7 +172,7 @@ useEffect(() => {
 
   return (
     <ProductContext.Provider
-      value={{ ...state, getUniqueValue, getLimitedProducts,handelInfiniteScroll,limits ,getSingleProducts,getCategoryWiseProduct,setProductCategory, mobileScreen}}
+      value={{ ...state, getUniqueValue, getLimitedProducts,handelInfiniteScroll,limits ,getSingleProducts,setProductCategory, mobileScreen}}
     >
       {" "}
       {/* // here we are passing all the value inside state which is isLoading isError and so on  */}

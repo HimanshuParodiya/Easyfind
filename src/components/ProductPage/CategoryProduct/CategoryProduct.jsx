@@ -7,7 +7,7 @@ import GoToTop from '../../../utils/GoToTop';
 const CategoryProduct = () => {
 
 
-    const {categoryProduct,getCategoryWiseProduct,isCategoryLoading } = useProductContext()
+    const {categoryProduct,isCategoryLoading } = useProductContext()
 
 
   return (
@@ -16,7 +16,7 @@ const CategoryProduct = () => {
       <ProductCategoryList />
     </div>
     <div className="product_featured">
-    <FeaturedProduct products={categoryProduct} getProducts={getCategoryWiseProduct} loading={isCategoryLoading} />
+    <FeaturedProduct products={categoryProduct} loading={isCategoryLoading} />
 
     </div>
     <GoToTop />

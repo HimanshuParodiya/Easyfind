@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './FeaturedProduct.css'
 import ProductContainer from '../../ProductBox/ProductContainer'
 import { useProductContext } from '../../../State/context/ProductContext'
 import { MagnifyingGlass } from 'react-loader-spinner'
 
-const FeaturedProduct = ({products,getProducts,loading}) => {
-  const {getUniqueValue,handelInfiniteScroll,limits } = useProductContext()
+const FeaturedProduct = ({products,loading}) => {
+  const {getUniqueValue,handelInfiniteScroll,limits,getLimitedProducts } = useProductContext()
   // creating an unique value for category from products array 
   let uniqueCategory = getUniqueValue(products, "category");
 
   useEffect(() => {
     const fetchData = async () => {
-      await getProducts(limits);
+      await getLimitedProducts(limits);
     };
   
     window.addEventListener("scroll", handelInfiniteScroll);
