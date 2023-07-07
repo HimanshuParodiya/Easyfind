@@ -147,6 +147,15 @@ const Navbar = () => {
                       Service
                     </NavLink>
                   </li>
+                  <li className="side_menu_li">
+                    <NavLink
+                      activeclassname="active"
+                      to="/cart"
+                      className="color_black"
+                    >
+                      <AiOutlineShoppingCart />
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             </div>

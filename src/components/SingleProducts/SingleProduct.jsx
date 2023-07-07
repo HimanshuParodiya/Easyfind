@@ -7,15 +7,13 @@ import { TbReplace, TbTruckDelivery } from "react-icons/tb";
 import { MdSecurity } from "react-icons/md";
 import SingleProductContainer from "./ProductContainer/SingleProductContainer";
 import StarRating from "./StarRating";
-import { MagnifyingGlass } from "react-loader-spinner";
 import { BeatLoader } from "react-spinners";
 import GoToTop from "../../utils/GoToTop";
-import SingleProductQuantity from "./SingleProductQuantity/SingleProductQuantity";
 
 const SingleProduct = () => {
   const { id } = useParams();
   const API = "https://dummyjson.com/products";
-  const { getSingleProducts, singleProducts, isSingleLoading } =
+  const { getSingleProducts, singleProducts, isSingleLoading, setCartItem, cartItem } =
     useProductContext();
     
     // console.log(`${API}/${id}`);
@@ -40,6 +38,27 @@ const SingleProduct = () => {
   useEffect(() => {
     getSingleProducts(`${API}/${id}`);
   }, []);
+
+  
+  const addProducts = (item) => {
+    
+    // Check if the item already exists in the cart
+    const itemExists = cartItem.some((cartItem) => cartItem.id === item.id);
+    
+    if (!itemExists) {
+      const updatedCart = [...cartItem, item];
+      setCartItem(updatedCart);
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      alert("item Added successfully")
+    }else{
+      
+      alert("item is already Added successfully")
+    }
+  };
+    
+    
+    
+  
 
   return (
     <>
@@ -128,10 +147,9 @@ const SingleProduct = () => {
            
           
           </div>
-            <SingleProductQuantity stock={stock} />
             <div className="singleProduct_button">
 
-            <button className="singleProduct_addToCartButton">Add To Cart</button>
+            <button className="singleProduct_addToCartButton" onClick={()=> addProducts(singleProducts)}>Add To Cart</button>
             </div>
         </div>
       </div>

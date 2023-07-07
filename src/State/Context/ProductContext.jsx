@@ -18,7 +18,7 @@ const ProductProvider = ({ children }) => {
   const CATEGORY_API = `https://dummyjson.com/products`
   const [limits, setLimits] = useState(10)
   const [mobileScreen, setmobileScreen] = useState(false)
-  
+  const [cartItem, setCartItem ] = useState([])
  
 
 
@@ -172,7 +172,7 @@ useEffect(() => {
 
   return (
     <ProductContext.Provider
-      value={{ ...state, getUniqueValue, getLimitedProducts,handelInfiniteScroll,limits ,getSingleProducts,setProductCategory, mobileScreen}}
+      value={{ ...state, getUniqueValue, getLimitedProducts,handelInfiniteScroll,limits ,getSingleProducts,setProductCategory, mobileScreen,cartItem,setCartItem}}
     >
       {" "}
       {/* // here we are passing all the value inside state which is isLoading isError and so on  */}

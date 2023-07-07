@@ -118,3 +118,34 @@
     align-items: center;
 }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ProductCategory__container{
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+    .productCategory_ul{
+        height:10vh;
+        overflow-y: scroll;
+    }
+    
+
+.productCategory_heading{
+    padding: 10px 5%;
+    font-size: 22px;
+    
+    
+}
+.categories{
+    display: flex;
+   width: max-content;
+    padding: 10px 5%;
+    flex-basis: auto;
+    margin: 10px 5px 0 15px;
+}
+
+.productCategory_li{
+    display: flex;
+    align-items: center;
+}
+}

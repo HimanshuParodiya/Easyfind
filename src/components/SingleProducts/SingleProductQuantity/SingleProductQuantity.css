@@ -4,14 +4,14 @@
     align-items: center;
 }
 .increaseQuantity{
-    flex: 0.1;
+    flex: 0.04;
 }
 .singleProductQuantity_quantity{
     text-align: center;
-    flex: 0.1;
+    flex: 0.04;
 }
 .decreaseQuantity{
-    flex: 0.1;
+    flex: 0.04;
 }
 .quantityAlert{
     flex: 0.7;
@@ -24,7 +24,7 @@
     outline-color: transparent;
     border: none;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     cursor: pointer;
 }
 

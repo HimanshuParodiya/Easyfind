@@ -16,9 +16,10 @@
 .carousel li.thumb{
     display: none;
 }
-s.carousel p.carousel-status {
+.carousel p.carousel-status {
     display: none;
 }
+
 
 .control-arrow {
     display: none;

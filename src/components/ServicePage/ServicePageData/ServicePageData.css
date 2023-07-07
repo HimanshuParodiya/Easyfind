@@ -23,7 +23,7 @@
 .divider{
     height: 250px;
     width: 2px;
-    /* background-color: #111; */
+    background-color: #111;
 }
 
 .serviceData_description{
@@ -58,7 +58,27 @@
     }
 }
 
-@media (min-width: 600px) and (max-width:768px) {
+@media (min-width: 601px) and (max-width:768px) {
+    .service_serialNo{
+        padding: 5px 13px;
+        font-size: 25px;
+    }
+    
+    .divider_container{
+      display: none;
+    }
+    .serviceData_description{
+        margin-bottom: 50px;
+       
+    }.serviceData_description p{
+        width: 90%;
+        font-size: 16px;
+        margin: 0 auto;
+    
+    }
+}
+
+@media (min-width: 769px) and (max-width:1024px) {
     .service_serialNo{
         padding: 5px 13px;
         font-size: 25px;

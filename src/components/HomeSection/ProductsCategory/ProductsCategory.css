@@ -57,7 +57,25 @@
 }
 
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 601px) and (max-width: 768px) {
+    .productsCategory__container{
+        gap: 5px;
+    } 
+    .productCategory__details .productCategory__image {
+        width: 130px;
+        height: 80px;
+        margin: 20px 0;
+    }
+    .productsCategory__container .productCategory__details{
+        padding: 0 5px;
+    }
+    .productCategory__name{
+        font-size: 12px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
     .productsCategory__container{
         gap: 5px;
     } 
