@@ -37,7 +37,7 @@ const SingleProduct = () => {
 
   useEffect(() => {
     getSingleProducts(`${API}/${id}`);
-  }, [id]);
+  }, []);
 
   
   const addProducts = (item) => {

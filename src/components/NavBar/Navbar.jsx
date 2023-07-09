@@ -27,7 +27,7 @@ const Navbar = () => {
   const filteredItems = searchedProduct.filter((filteredItem)=>{
     return filteredItem.title.toLocaleLowerCase().includes(query.toLocaleLowerCase())
   })
-console.log(filteredItems);
+// console.log(filteredItems);
 useEffect(()=>{
   if (query.length === 0) {
     setShowSearchField(false)

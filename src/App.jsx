@@ -16,13 +16,14 @@ import ErrorPage from './components/ErrorPage/ErrorPage'
 
 function App() {
   // state for preloader 
-  const [IsPreLoader, setIsPreLoader] = useState(false)
+  const [IsPreLoader, setIsPreLoader] = useState(true)
   
 
 
   useEffect(() => {
     // when the page gets load set loader to true
-    setIsPreLoader(true)
+    // setIsPreLoader(true)
+    // setIsPreLoader(true)
   
     // after 8 sec set the loader to false
     setTimeout(() => {
