@@ -7,16 +7,48 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link, NavLink } from "react-router-dom";
+import { useProductContext } from "../../State/context/ProductContext";
 
 const Navbar = () => {
-  const [openHamburger, setOpenHamburger] = useState(false);
-  // To Toggle dark and light navbar
-  const [showNavbar, setShowNavbar] = useState(false);
+  const {products } = useProductContext()
+  const [query, setQuery] = useState("")
+  const [showSearchField, setShowSearchField] = useState(false)
+  
+    const [openHamburger, setOpenHamburger] = useState(false);
+    // To Toggle dark and light navbar
+    const [showNavbar, setShowNavbar] = useState(false);
+  // console.log(products[0].title);
+  
+  let items = products.map((item)=>{
+    return {title : item.title, id: item.id}
+  })
+  const searchedProduct = items
 
+  const filteredItems = searchedProduct.filter((filteredItem)=>{
+    return filteredItem.title.toLocaleLowerCase().includes(query.toLocaleLowerCase())
+  })
+console.log(filteredItems);
+useEffect(()=>{
+  if (query.length === 0) {
+    setShowSearchField(false)
+  }else{
+    
+    setShowSearchField(true)
+  }
+  
+},[query])
+
+const handleSearchItem =() =>{
+  setQuery("")
+}
+
+  // console.log(filteredItems);
+  
   // if scroll is more than 100 then show dark nav otherthan show light one
   let transitionNav = () => {
     if (window.scrollY > 100) {
       setShowNavbar(true);
+
     } else {
       setShowNavbar(false);
     }
@@ -25,19 +57,20 @@ const Navbar = () => {
   useEffect(() => {
     // adding eventlistener for scroll and execute the function which will check if scroll is more than 100
     window.addEventListener("scroll", transitionNav);
-
+    
     return () => {
       // removeing eventlistener
       window.removeEventListener("scroll", transitionNav);
+
     };
   }, []);
-
+  
   const handleNavbar = () => {
     setOpenHamburger(!openHamburger);
     let sideMenu = document.querySelector(".sideMenu");
     sideMenu.classList.toggle("showMenu");
   };
-
+  
   // console.log(openHamburger);
 
   return (
@@ -58,8 +91,23 @@ const Navbar = () => {
 
           {/* Seachbar  */}
           <div className="navbar_search">
-            <input type="text" placeholder="let's Find" />
+            <div className="serachbar">
+            <input value={query} onChange={e => setQuery(e.target.value)} type="search" placeholder="let's Find" />
             <AiOutlineSearch className="search_icon" size={25} />
+
+            </div>
+            {
+                showSearchField &&
+              <div className="serched_results">
+            {
+             
+              filteredItems.map((item)=>{
+                return <NavLink key={item.id} to={`/singleproduct/${item.id}`} onClick={handleSearchItem} >{item.title}</NavLink>
+              })
+              
+            }
+            </div>
+            }
           </div>
 
           {/* Nav links  */}
